@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.test.RestTest1;
+
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -23,8 +23,7 @@ public class MyResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
      System.out.println("I am calling from Rest Service");
-    	RestTest1 rt1 = new RestTest1();
-    	rt1.callService();
+    
         return "Got it!";
     }
 }
