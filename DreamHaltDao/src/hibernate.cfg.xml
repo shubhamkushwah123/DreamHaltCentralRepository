@@ -18,10 +18,8 @@
         <property name="connection.password">password</property>
         <property name="javax.persistence.validation.mode">none</property>
         
-        <mapping class="com.model.UserDetails"/>
-        <mapping class="com.model.Message"/>
-        <mapping class="com.model.User"/>
-        <mapping class="com.model.Vehicle"/>
+        <mapping class="com.dh.dao.entities.Test"/>
+        
 
         <!--<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
         <!--<property name="connection.url">jdbc:mysql:///hibernate_tests?useUnicode=true&amp;characterEncoding=UTF-8</property>-->
