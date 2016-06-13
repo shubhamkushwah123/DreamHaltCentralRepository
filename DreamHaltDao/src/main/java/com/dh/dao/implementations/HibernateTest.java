@@ -1,4 +1,4 @@
-package test.dh.dao.implementations;
+package com.dh.dao.implementations;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
