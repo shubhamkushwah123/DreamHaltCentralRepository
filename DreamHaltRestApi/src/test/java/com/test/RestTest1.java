@@ -1,6 +1,6 @@
 package com.test;
 
-import com.service.test.DhServiceTest;
+
 
 public class RestTest1 {
 	
@@ -8,8 +8,7 @@ public class RestTest1 {
 	{
 		System.out.println("I am calling Service");
 		
-		DhServiceTest dh1 = new DhServiceTest();
-		dh1.serviceEcho();
+		
 	}
 
 }
