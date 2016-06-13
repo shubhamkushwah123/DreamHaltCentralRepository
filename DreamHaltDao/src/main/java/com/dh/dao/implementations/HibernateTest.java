@@ -11,7 +11,8 @@ public class HibernateTest {
 	public static void main(String args[])
 	{
 		Test t = new Test();
-		t.setName("Shubham");
+		t.setUsername("shubham");
+		t.setPassword("kushwah");
 		
 		@SuppressWarnings("deprecation")
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
