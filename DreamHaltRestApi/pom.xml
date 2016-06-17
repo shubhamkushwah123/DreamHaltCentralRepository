@@ -55,12 +55,11 @@
             <artifactId>jersey-media-moxy</artifactId>
         </dependency>
         -->
-
         <dependency>
-        	<groupId>org.dh.BusinessService</groupId>
-        	<artifactId>DreamHaltBusinessService</artifactId>
+        	<groupId>org.dh</groupId>
+        	<artifactId>DreamhaltService</artifactId>
         	<version>0.0.1-SNAPSHOT</version>
-        	<scope>compiler]</scope>
+        	<scope>compile</scope>
         </dependency>
     </dependencies>
     <properties>
