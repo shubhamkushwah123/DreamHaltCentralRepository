@@ -1,4 +1,4 @@
-package test.dh.business.service.implementations;
+package com.dh.business.service.implementation;
 
 public class LoginService {
 	
