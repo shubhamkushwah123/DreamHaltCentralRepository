@@ -3,6 +3,7 @@
 	<name>DreamHaltRestApi</name>
 	<comment></comment>
 	<projects>
+		<project>DreamhaltService</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
