@@ -5,22 +5,28 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="hbm2ddl.auto">CREATE</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <property name="show_sql">true</property>
         
         <property name="format_sql">false</property>
 
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/Dreamhalt</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/Dreamhalt?UseUnicode=true&amp;characterEncoding=utf-8&amp;charSet='UTF8'</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.charSet">UTF-8</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">password</property>
         <property name="javax.persistence.validation.mode">none</property>
+        <property name="hibernate.default_schema">public</property>
         
-        <mapping class="com.dh.dao.entities.Test"/>
-        
-
+      
+ 		<mapping class="com.dh.dao.entities.User"/>
+ 		<mapping class="com.dh.dao.entities.Address"/>
+ 		<mapping class="com.dh.dao.entities.Verification"/>
+ 		<mapping class="com.dh.dao.entities.ProfileImage"/>
+ 		<mapping class="com.dh.dao.entities.Login"/>
+ 		
         <!--<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
         <!--<property name="connection.url">jdbc:mysql:///hibernate_tests?useUnicode=true&amp;characterEncoding=UTF-8</property>-->
         <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->

@@ -1,33 +1,27 @@
 package com.dh.dao.entities;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="TB_USER")
-public class Test {
-	@Id @GeneratedValue
-	int id; 
+public class Login {
 	
-	@Column(name="USERNAME")
+	@Id
+	long userId;
+
 	String username;
 	
-	@Column(name="PASSWORD")
 	String password;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	
+	public long getUserId() {
+		return userId;
+	}
 
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+	
 	public String getUsername() {
 		return username;
 	}
@@ -43,6 +37,6 @@ public class Test {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 
+	
 }
