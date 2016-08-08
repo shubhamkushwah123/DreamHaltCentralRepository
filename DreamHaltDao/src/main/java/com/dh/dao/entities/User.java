@@ -7,12 +7,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 @Entity
 public class User {
@@ -50,7 +53,7 @@ public class User {
 	String password;
 	
 	
-	@OneToOne
+	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="image_id")
 	ProfileImage image;
 	
@@ -62,7 +65,7 @@ public class User {
 		this.image = image;
 	}
 
-	@OneToOne
+	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="address_id")
 	Address address;
 	
@@ -74,7 +77,8 @@ public class User {
 		this.address = address;
 	}
 
-	@OneToMany(mappedBy="user")
+	/*
+	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
 	List<Verification> listOfVerification = new ArrayList<Verification>();
 	
 	public List<Verification> getListOfVerification() {
@@ -84,7 +88,7 @@ public class User {
 	public void setListOfVerification(List<Verification> listOfVerification) {
 		this.listOfVerification = listOfVerification;
 	}
-
+	*/
 	@Column(name="created_Date")
 	Date createdAt;
 	
@@ -96,7 +100,7 @@ public class User {
 	}
 
 	public void setId(long id) {
-		id = id;
+		id = this.id;
 	}
 
 	public String getFirstName() {
@@ -219,6 +223,9 @@ public class User {
 		this.password = password;
 	}
 	
-	
+	public User()
+	{
+		
+	}
 
 }

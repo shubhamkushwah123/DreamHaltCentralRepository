@@ -39,9 +39,10 @@ public class LoginDaoImpl implements LoginDaoInterface {
 	            System.out.println("resultset:"+result);
 	            Iterator iterator = result.iterator();
 	            while(iterator.hasNext()){
-	                login =  (Login)iterator.next();
+	             userId  = (Long) iterator.next();
 	                }
-	            User user = (User) session.get(User.class, login.getUserId());
+	            User user = (User) session.get(User.class, userId);
+	           // user.getListOfVerification();
 	            return user;
 	    } catch (HibernateException e) {
 	        if (session.getTransaction() != null) {

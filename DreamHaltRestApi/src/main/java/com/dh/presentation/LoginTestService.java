@@ -13,12 +13,12 @@ import com.dh.dao.entities.User;
 
 
 
-@Path("login")
+@Path("loginTest")
 public class LoginTestService {
 	
 	 @GET
-	 @Produces(MediaType.TEXT_PLAIN)
-	 public String getIt() {
+	 @Produces(MediaType.APPLICATION_XML)
+	 public User getIt() {
 	  
 	  System.out.println("I am calling from Rest Service");
 	  Login login = new Login();
@@ -33,7 +33,7 @@ public class LoginTestService {
 	  else{
 		 msg = "User " + user.getFirstName() + "is successfully loggedIn";
 	  }
-	  return msg;
+	  return user;
 	 }
 
 }

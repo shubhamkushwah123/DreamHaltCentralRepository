@@ -68,8 +68,8 @@ public class HelloWorld {
 		v2.setvType("Pancard");
 		v2.setvAttachment("Pancard Image");
 		
-		user.getListOfVerification().add(v1);
-		user.getListOfVerification().add(v2);
+	//	user.getListOfVerification().add(v1);
+	//	user.getListOfVerification().add(v2);
 		v1.setUser(user);
 		v2.setUser(user);
 		

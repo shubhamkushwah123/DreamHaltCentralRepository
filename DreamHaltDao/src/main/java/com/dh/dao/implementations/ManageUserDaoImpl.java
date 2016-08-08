@@ -120,7 +120,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		session.beginTransaction();
 		try{
 		User user = (User) session.get(User.class, userId);
-		list = user.getListOfVerification();
+		//list = user.getListOfVerification();
 		session.close();
 		return list;
 		}catch(Exception e)
