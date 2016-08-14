@@ -1,0 +1,225 @@
+<div class="section" ng-controller="user_references as tab">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav nav-stacked" role="tablist">
+
+                        <li class="active">
+                            <a href="profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="view" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="View Profile" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success">
+                            <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
+                                <li ng-class="{active:tab.isSet(1)}" data-toggle="tab">
+                                    <a href ng-click="tab.setTab(1)">
+                                        <i class="material-icons">assignment</i>
+                                        Request References
+                                    </a>
+                                </li>
+                                <li ng-class="{active:tab.isSet(2)}" data-toggle="tab">
+                                    <a href ng-click="tab.setTab(2)">
+                                        <i class="material-icons">assignment</i>
+                                        References About You
+                                    </a>
+                                </li>
+                                <li ng-class="{active:tab.isSet(3)}" data-toggle="tab">
+                                    <a href ng-click="tab.setTab(3)">
+                                        <i class="material-icons">assignment</i>
+                                        References By You
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="content">
+                            <div class="tab-content">
+                                <div class="tab-pane active" ng-show="tab.isSet(1)">
+                                    <div class="panel row-space-top-4">
+                                        <h4>
+                                            <strong>Email Your Friend</strong>
+                                        </h4>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    Friends you email can sign up on Dreamhalt to write you a personal reference. You can review new references and either accept or ignore them before they are displayed on your public profile.
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <form accept-charset="UTF-8" action="" id="individual_emails" method="post">
+                                                        <textarea rows="5" class="form-control border-input">
+                                                          
+                                                        </textarea>
+                                                        <input class="btn btn-sm btn-primary btn-raised" name="commit" type="submit" value="Send Request Emails">
+                                                        <br>
+                                                        <a id="plaxo" class="btn btn-sm btn-primary btn-raised" href="#" data-prevent-default="">
+                                                            Import your contacts
+                                                        </a>
+                                                    </form>         
+                                                </div>
+                                                <div class="clearfix"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="tab-pane active" ng-show="tab.isSet(2)">
+                                    <p class="text-gray"> 
+                                        When you accept a reference it will appear on your public profile. If you ignore a reference it will not appear in your profile, and the other person will not be notified.
+                                    </p>
+                                </div>
+                                <div class="tab-pane active" ng-show="tab.isSet(3)">
+                                    <p class="text-gray"> 
+                                       Write references only for people you know well enough to recommend to the dreamhalt Community. If you ignore a request the other person will not be notified.     </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" ng-show="tab.isSet(1)">
+
+                            <div class="card card-nav-tabs">
+
+                                <div class="header header-success small">
+                                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper text-center">
+                                            <h4>Facebook</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="container-fluid">
+                                                <button class="btn btn-social btn-fill btn-facebook">
+                                                    <i class="fa fa-facebook-square"></i> &nbsp;&nbsp;&nbsp;&nbsp;Create Request
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="">
+                                                Sign in with Facebook and discover your trusted connections to hosts and guests all over the world.
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card card-nav-tabs">
+
+                                <div class="header header-success small">
+                                    <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper text-center">
+                                            <h4>Dreamhalt Friends</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="row">
+
+
+                                        <ul class="nav nav-pills ">
+                                            <li class="col-md-2 text-center ">
+                                                <a href="/users/show/22815318" class="img img-circle">
+                                                    <img alt="Amber"  class="img img-circle" height="68" src="https://a2.muscache.com/im/users/22815318/profile_pic/1413926334/original.jpg?aki_policy=profile_medium" title="Amber" width="68">
+                                                </a>                
+                                                <div class="name">Amber</div>
+                                                <form accept-charset="UTF-8" action="/friend_recommendation_requests/create/" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="V4$.airbnb.co.in$SBYguRs2Zzc$kJfoj5fA5pefekpgFYqt899WCbc6tm7uyWcvwHtTEus="></div>
+                                                    <button type="submit" class="btn btn-sm">
+                                                        Request
+                                                    </button>
+                                                    <input type="hidden" name="friend_recommendation_request[left_by_user_id]" value="22815318">
+                                                    <input type="hidden" name="friend_recommendation_request[channel]" value="1">
+                                                    <input type="hidden" name="friend_recommendation_request[source]" value="3">
+                                                </form>       
+                                            </li>
+                                            <li class="col-md-2 text-center">
+                                                <a href="/users/show/40235225" class="">
+                                                    <img alt="Austin" class="img img-circle" height="68" src="https://a1.muscache.com/im/users/40235225/profile_pic/1438477964/original.jpg?aki_policy=profile_medium" title="Austin" width="68">
+                                                </a>                <div class="name">Austin</div>
+                                                <form accept-charset="UTF-8" action="/friend_recommendation_requests/create/" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="V4$.airbnb.co.in$SBYguRs2Zzc$kJfoj5fA5pefekpgFYqt899WCbc6tm7uyWcvwHtTEus="></div>
+                                                    <button type="submit" class="btn btn-sm">
+                                                        Request
+                                                    </button>
+                                                    <input type="hidden" name="friend_recommendation_request[left_by_user_id]" value="40235225">
+                                                    <input type="hidden" name="friend_recommendation_request[channel]" value="1">
+                                                    <input type="hidden" name="friend_recommendation_request[source]" value="3">
+                                                </form>              </li>
+                                            <li class="col-md-2 text-center ">
+                                                <a href="/users/show/50552921" class="">
+                                                    <img alt="Jay" class="img img-circle" height="68" src="https://a2.muscache.com/im/pictures/ec44fbb1-e04a-4dae-a258-abcbd67ecfc8.jpg?aki_policy=profile_medium" title="Jay" width="68">
+                                                </a>                <div class="name">Jay</div>
+                                                <form accept-charset="UTF-8" action="/friend_recommendation_requests/create/" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="V4$.airbnb.co.in$SBYguRs2Zzc$kJfoj5fA5pefekpgFYqt899WCbc6tm7uyWcvwHtTEus="></div>
+                                                    <button type="submit" class="btn btn-sm">
+                                                        Request
+                                                    </button>
+                                                    <input type="hidden" name="friend_recommendation_request[left_by_user_id]" value="50552921">
+                                                    <input type="hidden" name="friend_recommendation_request[channel]" value="1">
+                                                    <input type="hidden" name="friend_recommendation_request[source]" value="3">
+                                                </form>             
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

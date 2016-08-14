@@ -1,0 +1,91 @@
+<div class="section" ng-controller="user_review as tab">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav nav-stacked" role="tablist">
+
+                        <li class="active">
+                            <a href="profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="view" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="View Profile" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+                <div class="col-lg-9 col-md-9">
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success">
+                            <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
+                                <li ng-class="{active:tab.isSet(1)}" data-toggle="tab">
+                                    <a href ng-click="tab.setTab(1)">
+                                        <i class="material-icons">assignment</i>
+                                        Reviews About You
+                                    </a>
+                                </li>
+                                <li ng-class="{active:tab.isSet(2)}" data-toggle="tab">
+                                    <a href ng-click="tab.setTab(2)">
+                                        <i class="material-icons">assignment</i>
+                                        Reviews By You
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="content">
+                            <div class="tab-content text-center">
+                                <div class="tab-pane active" ng-show="tab.isSet(1)">
+                                    <p class="text-gray">
+                                        Reviews are written at the end of a reservation through Dreamhalt. Reviews you’ve received will be visible both here and on your public profile.
+                                    </p></div>
+                                <div class="tab-pane active" ng-show="tab.isSet(2)">
+                                    <p class="text-gray"> Nobody to review right now. Looks like it’s time for another trip!</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-success small" ng-controller="user-header" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <a class="navbar-brand" href="#"> {{ heading }}</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="../help/" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="ti-help"></i>
+                        <p>Help</p>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle btn-simple" data-toggle="dropdown">
+                        <i class="ti-bell"></i>
+                        <p class="notification">{{count}}</p>
+                        <p>Notifications</p>
+                        <b class="caret"></b>
+                    </a>
+                     <ul class="dropdown-menu " >
+                        <li class="" ng-repeat="item in notification"  ><a href="">{{ item.name }}</a></li>
+                        <li role="separator" class="divider" ></li>
+                        <li class="list-group-item-success text-center text-success"><a href="#notification">View All</a></li>
+
+                    </ul>
+                 
+                </li>
+                <li>
+                    <a href="#setting.">
+                        <i class="ti-settings"></i>
+                        <p>Settings</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

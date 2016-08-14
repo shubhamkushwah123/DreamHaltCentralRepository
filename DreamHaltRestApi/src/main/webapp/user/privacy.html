@@ -1,0 +1,149 @@
+<div class="section" ng-controller="user_privacy">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav  nav-stacked" role="tablist">
+
+                        <li class="active">
+                            <a href="notifications" role="tab" data-toggle="tab" >
+                                Notifications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="payment_methods" role="tab" data-toggle="tab">
+                                Payment Methods
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payout_preferences" role="tab" data-toggle="tab">
+                                Payout Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaction_history" role="tab" data-toggle="tab">
+                                Transaction History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy" role="tab" data-toggle="tab">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security" role="tab" data-toggle="tab">
+                                Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings" role="tab" data-toggle="tab">
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="invite" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="Invite Friends" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Social Connections </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-sm-12 col-md-12">
+
+                                        <div class="input-group">
+                                            Social Connections highlights your  activity, which may include your username, Facebook profile photo, and recent locations you visited to your Facebook friends who are also on Airbnb.
+
+                                        </div>
+                                        <div class="checkbox form-control">
+                                            <label>
+                                                <input type="checkbox" ng-model="socialNotification" ><span class="checkbox-material"><span class="check"></span></span>
+                                                Share my activity with my Facebook friends that are also on Dreamhalt (recommended)
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 pull-right">
+
+                                        <button type="button" class="btn btn-primary btn-block" ng-click="submit()">Save Social Connection</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Add Dreamhalt to Facebook Timeline</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <form>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+
+                                        <div class="input-group">
+
+                                            Check this box to automatically publish your Wish Lists to Facebook.
+                                        </div>
+                                        <div class="input-group form-group ">
+
+                                            They'll show up in your Facebook Timeline and your friends' News Feed and Ticker.
+                                        </div>
+                                        <div class="checkbox form-control">
+                                            <label>
+                                                <input type="checkbox" ng-model="timelineNotification" ><span class="checkbox-material"><span class="check"></span></span>
+                                                Automatically publish Wish List stories to Facebook (recommended)ed)
+                                            </label>
+                                        </div>
+                                        <div class="text-center pull-right">
+
+                                            <input type="button" value="Save Facebook Settings" class="btn btn-primary btn-raised " ng-click="submit()">
+                                        </div>
+                                    </div>      
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

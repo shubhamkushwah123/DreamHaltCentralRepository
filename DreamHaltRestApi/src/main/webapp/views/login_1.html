@@ -1,0 +1,52 @@
+
+<!-- Sart Modal -->
+<div id="modal-login" tabindex="-1" class="modal fade  section-full-screen section-signup" style="background-image: url('./img/city.jpg'); background-size: cover; background-position: top center; min-height: 100%;">
+    <div class="container modal-dialog">
+        <div  class="modal-content" >
+            <div class="col-md-8 col-md-offset-2">
+                <div class="card card-signup" ng-controller="login_controller">
+                    <form class="form" method="POST" action="/">
+                        <div class="head header  header-primary text-center">
+                            <h4>Sign in with</h4>
+                            <div class="social-line">
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-divider">Welcome Back!</p>
+                        <div class="content">
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">email</i>
+                                </span>
+                                <input type="text" name="email" class="form-control" ng-model="user.email" placeholder="Email...">
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">lock_outline</i>
+                                </span>
+                                <input type="password" name="password" placeholder="Password..." ng-model="user.password" class="form-control" />
+                            </div>
+
+                        </div>
+                        <div class="text-center footer">
+                            <a  href="#" class="btn btn-primary btn-simple btn-wd btn-lg" data-dismiss="modal">Cancel</a>
+                            <a href="#" class="btn btn-primary btn-simple btn-wd btn-lg" ng-click="submit()"> Sign in</a>
+                          </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

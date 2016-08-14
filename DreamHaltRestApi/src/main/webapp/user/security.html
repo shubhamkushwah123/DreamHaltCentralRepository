@@ -1,0 +1,172 @@
+<div class="section" ng-controller="user_security">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav  nav-stacked" role="tablist">
+                        <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                        -->
+                        <li class="active">
+                            <a href="notifications" role="tab" data-toggle="tab" >
+                                Notifications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="payment_methods" role="tab" data-toggle="tab">
+                                Payment Methods
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payout_preferences" role="tab" data-toggle="tab">
+                                Payout Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaction_history" role="tab" data-toggle="tab">
+                                Transaction History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy" role="tab" data-toggle="tab">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security" role="tab" data-toggle="tab">
+                                Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings" role="tab" data-toggle="tab">
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="invite" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="Invite Friends" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs card-form-horizontal" >
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Change Your Password</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group text-right">
+                                            <label>Old Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="password" ng-model="currentPassword" class="form-control " >
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group text-right">
+                                            <label>New Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="password" ng-model="newPassword" class="form-control " >
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group text-right">
+                                            <label>Confirmed Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="password" ng-model="ConfirmedPassword" class="form-control " >
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="text-center margin-top">
+
+                                    <input type="button" value="Update Password" class="btn btn-primary btn-raised " ng-click="updatePassword()">
+                                </div>
+                                <div class="clearfix"></div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="general">
+
+                        <div class="card card-nav-tabs">
+                            <div class="header header-success small">
+                                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper text-center">
+                                        <h4>Login Notifications</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <form>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" ng-model="loginNotification" ><span class="checkbox-material"><span class="check"></span></span>
+                                                    Turn on login notifications
+                                                </label>
+                                            </div>
+                                            <div class="form-group ">
+                                                Login notifications are an extra security feature. When you turn them on, we’ll let you know when anyone logs into your  account from a new browser. This helps keep your account safe.
+                                            </div>
+
+                                             <div class="form-control">                                            </div>                            
+                                        </div>
+                                    </div>
+
+
+                                    <div class="text-center">
+
+                                        <input type="button" value="Save" class="btn btn-primary btn-raised " ng-click="changeNotification()">
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

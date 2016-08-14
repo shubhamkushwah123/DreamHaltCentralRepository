@@ -1,0 +1,696 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+
+            <div class="col-md-3">
+
+                <ul class="nav nav-stacked" role="tablist">
+
+                    <li class="active">
+                        <a href="#basics" role="tab" data-toggle="tab" >
+                            Basic
+                        </a>
+                    </li>
+
+                    <li>
+                        <a  href="#description" data-toggle="tab">
+
+                            Description
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="#location" data-toggle="tab">
+                            <p>Location</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="#amenities" data-toggle="tab">
+                            <p>Amenities</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="#add-photo" data-toggle="tab">
+                            <p>Add Photos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="#pricing" data-toggle="tab">
+
+                            <p>Pricing</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="">
+                    <div class="row">
+                        <div class="tab-pane" id="basics">
+                            <div class="">
+                                <div class="card card-nav-tabs">
+                                    <div class="header header-success text-center">
+                                        <h4 class="title">Let's start with the basic details</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+
+                                                        <label>Home Type</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Property type -</option>
+                                                            <option value="Afghanistan"> Apartment </option>
+                                                            <option value="Albania"> House </option>
+                                                            <option value="Algeria"> Bed & Breakfast </option>
+                                                            <option value="American Samoa"> Other </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+
+                                                        <label>Room Type</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Room type -</option>
+                                                            <option value="Afghanistan"> Entire Home </option>
+                                                            <option value="Albania"> Private Room </option>
+                                                            <option value="Algeria"> Shared Room </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+
+                                                        <label>Accommodates</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Persons -</option>
+                                                            <option value="Afghanistan"> 1 Person </option>
+                                                            <option value="Albania"> 2 Persons </option>
+                                                            <option value="Algeria"> 3 Persons </option>
+                                                            <option value="American Samoa"> 4 Persons </option>
+                                                            <option value="Andorra"> 5 Persons </option>
+                                                            <option value="Angola"> 6+ Persons </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+
+                                                        <label>Bedroom</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Bedroom -</option>
+                                                            <option value="1"> 1 Bedroom </option>
+                                                            <option value="2"> 2 Bedrooms </option>
+                                                            <option value="3"> 3 Bedrooms </option>
+                                                            <option value="4"> 4 Bedrooms </option>
+                                                            <option value="5"> 5 Bedrooms </option>
+                                                            <option value="6"> 6+ Bedrooms </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+
+                                                        <label>Bed</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Bed -</option>
+                                                            <option value="1"> 1 Bed </option>
+                                                            <option value="2"> 2 Beds </option>
+                                                            <option value="3"> 3 Beds </option>
+                                                            <option value="4"> 4 Beds </option>
+                                                            <option value="5"> 5 Beds </option>
+                                                            <option value="6"> 6+ Beds </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+
+                                                        <label>Bathroom</label><br>
+                                                        <select name="country" class="form-control border-input">
+                                                            <option disabled="" selected="">- Bathroom -</option>
+                                                            <option value="1"> 1 Bathroom </option>
+                                                            <option value="2"> 2 Bathrooms </option>
+                                                            <option value="3"> 3 Bathrooms </option>
+                                                            <option value="4"> 4 Bathrooms </option>
+                                                            <option value="5"> 5 Bathrooms </option>
+                                                            <option value="6"> 6+ Bathrooms </option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="text-center">
+                                                <a  href="#aminities" data-toggle="tab" class="btn btn-info btn-fill btn-wd">Next Step</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane" id="description">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card card-nav-tabs">
+                                    <div class="header header-success text-center">
+                                        <h4 class="title">Make your space user friendly</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <label>Listing Name</label>
+                                                    <input type="text" class="form-control border-input" placeholder="Listing Name" value="">
+
+                                                </div>
+
+                                            </div>                             
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Summary</label>
+                                                        <textarea rows="2" class="form-control border-input" placeholder="Here can be your home description">
+                                                        
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Guest Access</label>
+                                                        <textarea rows="3" class="form-control border-input" placeholder="Here can be your home description">
+                                                        
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>House Rules</label>
+                                                        <textarea rows="3" class="form-control border-input" placeholder="Here can be your home description">
+                                                        
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Next Step</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane" id="amenities">
+
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h4 class="title">Basic Amenities</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Cable TV
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Internet
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Kitchen
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Car Parking
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                24 Hours Check in
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Breakfast
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Dinner
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Lunch
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                First aid kit
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                News Paper
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                AC
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>                             
+                                            <div class="row">
+                                                <div class="header">
+                                                    <h4 class="title">Additional  Amenities</h4>
+                                                </div>
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Bar
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Swimming Pool
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Gym
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-3">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Washing Machine
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Laptop friendly workspace
+
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Wheel Chair Accessible
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>                             
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Next Step</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-pane" id="location">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h4 class="title">Help guests find your place</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Street Address</label>
+                                                        <input type="text" class="form-control border-input" placeholder="Home Address" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>City</label>
+                                                        <input type="text" class="form-control border-input" placeholder="City" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>State</label>
+                                                        <input type="text" class="form-control border-input" placeholder="State" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row">
+
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Country</label>
+                                                        <input type="text" class="form-control border-input" placeholder="Country" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Zip Code</label>
+                                                        <input type="number" class="form-control border-input" placeholder="ZIP Code">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="tab-pane" id="add-photo">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h4 class="title">Add photos of your space to make it alive</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <label >Make sure you add at least one photo of your space which the guest are allowed to access</label>
+
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button class="btn btn-default btn-lg" >
+                                                        <i class="ti-plus"></i>    
+                                                    </button>
+                                                </div>
+                                            </div>                             
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <img >
+                                                </div>
+                                            </div>   
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Next Step</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="tab-pane" id="pricing">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h4 class="title">Set a price for your property</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+
+                                                <div class="col-md-4">
+                                                    <label>Price</label>
+
+                                                    <input type="number" class="form-control border-input" placeholder="Price" >
+
+                                                </div>
+
+                                            </div>                             
+
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Finished</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="tab-pane" id="finish">
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h4 class="title">Basic Aminities</h4>
+                                    </div>
+                                    <div class="content">
+                                        <form>
+                                            <div class="row">
+
+                                                <div class="col-md-5">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Cable TV
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Internet
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Kitchen
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-5">
+
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Cable TV
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Internet
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Kitchen
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>                             
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <label>Additional Aminities </label><br>
+                                                    <div class="has-success">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxSuccess" value="option1">
+                                                                Cable TV
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-warning">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxWarning" value="option1">
+                                                                Internet
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="has-error">
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" id="checkboxError" value="option1">
+                                                                Kitchen
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>                             
+
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-info btn-fill btn-wd">Next Step</button>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

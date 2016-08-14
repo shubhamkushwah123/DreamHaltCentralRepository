@@ -1,0 +1,235 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav nav-stacked" role="tablist">
+
+                        <li class="active">
+                            <a href="profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="view" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="View Profile" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Required</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" ng-model="firstName" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Middle Name</label>
+                                            <input type="text" ng-model="middleName" class="form-control " >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" ng-model="lastName" class="form-control " >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-2">
+                                        <div class="form-group ">
+                                            <label>Gender</label><br>
+                                            <select class="select form-control " ng-options="Gen for Gen in gender" ng-model="selectedGender"></select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-2">
+
+                                        <div class="form-group label-floating">
+                                            <label>Date of Birth</label><br>
+                                            <input class="form-control ng-pristine ng-valid ng-empty ng-touched" size="16" type="text" ng-model="dob" placeholder="" id="dob" style="">
+
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" class="form-control" ng-model="phonenumber">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Email address</label>
+                                            <input type="email" class="form-control" ng-model="email">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <input type="text" class="form-control " ng-model="address">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>City</label>
+                                            <input type="text" class="form-control " ng-model="city">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Country</label>
+                                            <input type="text" class="form-control " ng-model="country">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label>Postal Code</label>
+                                            <input type="number" class="form-control" ng-model="pincode">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        
+                                        <div class="form-group ">
+                                            <label>About Me</label>
+                                            <textarea class="form-control" rows="5" ng-model="about"></textarea>
+                                            <span class="material-input"></span>
+                                        </div>
+                                        <div class="form-group ">
+
+
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="general">
+
+                        <div class="card card-nav-tabs">
+                            <div class="header header-success small">
+                                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper text-center">
+                                        <h4>Optional</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <form>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>You Education Qualification</label>
+                                                <input type="text" class="form-control "  ng-model="school">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Where do you work?</label>
+                                                <input type="text" class="form-control"  ng-model="work">
+                                            </div>
+                                        </div>
+                                    </div>  
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>what are the Languages do you speak?</label>
+                                                <input type="text" class="form-control" ng-model="languages">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="text-center pull-right">
+
+                                <input type="button" value="Save" class="btn btn-primary btn-raised " ng-click="submit()">
+                            </div>    
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

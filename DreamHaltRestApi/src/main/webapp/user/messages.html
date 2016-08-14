@@ -1,0 +1,79 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-4 col-md-4">
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>View Messages</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios"><span class="circle"></span><span class="check"></span>
+                                    All Messages
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" checked="true"><span class="circle"></span><span class="check"></span>
+                                    Unread
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" checked="true"><span class="circle"></span><span class="check"></span>
+                                    Pending Request
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="cards scard-nav-tabs">
+                        <div class="header header-success">
+                            <div class="col-md-12">
+
+                                <!-- Tabs with icons on Card -->
+                                <div class="card card-nav-tabs ">
+                                    <div class="header header-success small">
+                                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                        <div class="nav-tabs-navigation">
+                                            <div class="nav-tabs-wrapper text-center">
+                                                <h3> Messages ( {{messageCount}} )</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="tab-content text-center">
+                                            <div class="tab-pane active">
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Tabs with icons on Card -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tabs with icons on Card -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>    

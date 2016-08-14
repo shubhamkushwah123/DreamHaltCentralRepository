@@ -1,0 +1,44 @@
+<div class="subscribe-line subscribe-line-image" style="background-image: url('../img/bg/bg3.jpeg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <h3 class="title">Share your love of travel</h3>
+                    <p class="description">
+                        When a friend travels on Dreamhalt, you both get ₹500 in travel credit. 
+                        When they welcome their first guest, you get ₹700 in travel credit. See <a> Terms & Conditions </a>
+                    </p>
+                </div>
+
+                <div class="card card-raised card-form-horizontal">
+                    <div class="content">
+                        <form class="form" name="inviteForm" novalidate ng-submit="invite()">
+                            <div class="row">
+                                <div class="col-sm-8">
+
+                                    <div class="form-group input-group" ng-class="{'has-error': inviteForm.email.$invalid && inviteForm.email.$dirty , 'has-success': inviteForm.email.$valid && inviteForm.email.$dirty}">
+
+                                        <span class="input-group-addon">
+                                            <i class="material-icons">email</i>
+                                        </span>
+
+                                        <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email..." required>
+                                        <span class="form-control-feedback"  ng-show="inviteForm.email.$valid && inviteForm.email.$dirty">
+                                            <i class="material-icons">done</i>
+                                        </span>
+                                        <span class="material-icons form-control-feedback" ng-show="inviteForm.email.$invalid && inviteForm.email.$dirty">clear</span>
+                                        <span class="material-input"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <button type="submit" class="btn btn-primary btn-block" ng-disabled="inviteForm.$invalid">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

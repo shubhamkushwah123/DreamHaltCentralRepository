@@ -1,0 +1,76 @@
+<div id="modal-register" tabindex="-1" class="section-full-screen section-signup" style="background-repeat: no-repeat; background-image: url('./img/city.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+    <div class="container modal-dialog">
+        <div class="modal-content">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="card card-signup">
+                    <form class="form" name="signupForm"  novalidate ng-submit="signup()">
+                        <div class="head header  modal-header header-primary text-center">
+                            <h4>Sign Up</h4>
+                            <div class="social-line">
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-divider" ng-show="!errorOccured">Ready to join!</p>
+                         <p class="text-divider alert-danger" ng-show="errorOccured">Sorry! an error has occurred! </p>
+
+                        <div class="content">
+
+                            <div class="form-group input-group" ng-class="{'has-error': signupForm.firstName.$invalid && signupForm.firstName.$dirty , 'has-success': signupForm.firstName.$valid && signupForm.firstName.$dirty}">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">face</i>
+                                </span>
+                                <input type="text" name="firstName" placeholder="First Name..." ng-model="user.firstName" class="form-control" required>
+                                <span class="form-control-feedback"  ng-show="signupForm.firstName.$valid && signupForm.firstName.$dirty">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-icons form-control-feedback" ng-show="signupForm.firstName.$invalid && signupForm.firstName.$dirty">clear</span>
+                                <span class="material-input"></span>
+                            </div>
+                            
+                            <div class="form-group input-group" ng-class="{'has-error': signupForm.email.$invalid && signupForm.email.$dirty , 'has-success': signupForm.email.$valid && signupForm.email.$dirty}">
+
+                                <span class="input-group-addon">
+                                    <i class="material-icons">email</i>
+                                </span>
+
+                                <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email..." required>
+                                <span class="form-control-feedback"  ng-show="signupForm.email.$valid && signupForm.email.$dirty">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-icons form-control-feedback" ng-show="signupForm.email.$invalid && signupForm.email.$dirty">clear</span>
+                                <span class="material-input"></span>
+                            </div>
+
+                          
+                            <div class="form-group input-group" ng-class="{'has-error': signupForm.password.$invalid && signupForm.password.$dirty , 'has-success': signupForm.password.$valid && signupForm.password.$dirty}">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">lock_outline</i>
+                                </span>
+                                <input type="password" name="password" placeholder="Password..." ng-model="user.password" class="form-control" required>
+                                <span class="form-control-feedback"  ng-show="signupForm.password.$valid && signupForm.password.$dirty">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-icons form-control-feedback" ng-show="signupForm.password.$invalid && signupForm.password.$dirty">clear</span>
+                                <span class="material-input"></span>
+                            </div>
+                            
+                        </div>
+                        <div class="text-center footer">
+                            <button  type="button" class="btn btn-primary btn-simple btn-wd btn-lg" ng-click="cancel()">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-simple btn-wd btn-lg" ng-disabled="signupForm.$invalid" >Get Started</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

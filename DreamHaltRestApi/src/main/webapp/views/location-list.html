@@ -1,0 +1,27 @@
+<div class="main main-raised">
+<div class="container" ng-controller="location_list_controller" >
+    <div class="section text-center">
+        <h2>Explore Properties in Your Area</h2>
+        <h5><i class="fa fa-map-marker"></i> {{ currentlocation}} <span class="team-color"> Change location </span></h5>
+    </div>
+    <div class="row">
+        <div  class="section" ng-repeat="item in location">
+          
+            <div class="{{item.size}}">
+                <div class="card card-raised card-background" style="background-image: url('{{item.image}}')">
+                    <div class="content">
+                        <h2 class="category text-info"><strong>{{ item.name}} </strong> </h2>
+                        <h5>{{ item.count}} Listing </h5>
+                        
+                        <a href="#pablo" class="btn btn-danger btn-round">
+                            <i class="material-icons">format_align_left</i> explore more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>    
+</div>

@@ -1,0 +1,49 @@
+
+<nav class="navbar  navbar-transparent navbar-absolute">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+              <a class="navbar-brand logo" href="">
+                <img class="logo-profile img-responsive"  src="./img/dh_white.png" >
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigation-example" ng-controller="header_menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="./property" class="" target="_blank">
+                        <span style="border: #FFF 2px solid; padding: 10px 20px;">Become a Host </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="" data-toggle="dropdown"   class="">
+                        <i class="material-icons">help</i> Help
+                    </a>
+                    <ul class="dropdown-menu " ng-controller="help_menu" >
+                        <li class="" ng-repeat="item in lists"  ><a href="">{{ item.name }}</a></li>
+                        <li role="separator" class="divider" ></li>
+                        <li class="list-group-item-success text-center text-success"><a href="./help">View All</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="./index.html#" data-toggle="modal" data-target="#modal-register">
+                        Sign Up
+                    </a>
+
+                </li>
+                <li>
+                    <a href="./index.html#" data-toggle="modal" data-target="#modal-login">
+                        Log in
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,63 @@
+<!-- Sart Modal -->
+<div id="modal-login" tabindex="-1" class=" section-full-screen section-signup" style="background-image: url('./img/city.jpg'); background-size: cover; background-position: top center; min-height: 100%;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                <div class="card card-signup">
+                    <form class="form" name="loginForm" novalidate ng-submit="login()">
+                        <div class="header header-primary text-center">
+                            <h4 class="card-title">Log in</h4>
+                            <div class="social-line">
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#pablo" class="btn btn-just-icon btn-simple">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-divider" ng-show="!wrongCredentials" >Welcome Back!</p>
+                        <p class="text-divider alert-danger" ng-show="wrongCredentials" >Wrong User ID/Password! Try again!</p>
+
+                        <div class="content">
+
+                            <div class="form-group input-group" ng-class="{'has-error': loginForm.email.$invalid && loginForm.email.$dirty , 'has-success': loginForm.email.$valid && loginForm.email.$dirty}">
+
+                                <span class="input-group-addon">
+                                    <i class="material-icons">email</i>
+                                </span>
+
+                                <input type="email" name="email" class="form-control" ng-model="user.email" placeholder="Email..." required>
+                                <span class="form-control-feedback"  ng-show="loginForm.email.$valid && loginForm.email.$dirty">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-icons form-control-feedback" ng-show="loginForm.email.$invalid && loginForm.email.$dirty">clear</span>
+                                <span class="material-input"></span>
+                            </div>
+
+                            <div class="form-group input-group" ng-class="{'has-error': loginForm.password.$invalid && loginForm.password.$dirty , 'has-success': loginForm.password.$valid && loginForm.password.$dirty}">
+                                <span class="input-group-addon">
+                                    <i class="material-icons">lock_outline</i>
+                                </span>
+                                <input type="password" name="password" placeholder="Password..." ng-model="user.password" class="form-control" required>
+                                <span class="form-control-feedback"  ng-show="loginForm.password.$valid && loginForm.password.$dirty">
+                                    <i class="material-icons">done</i>
+                                </span>
+                                <span class="material-icons form-control-feedback" ng-show="loginForm.password.$invalid && loginForm.password.$dirty">clear</span>
+                                <span class="material-input"></span>
+                            </div>
+                        </div>
+                        <div class="text-center footer">
+                            <button type="button" ng-click="cancel()" class="btn btn-primary btn-simple btn-wd btn-lg" >Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-simple btn-wd btn-lg" ng-disabled="loginForm.$invalid"> Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    

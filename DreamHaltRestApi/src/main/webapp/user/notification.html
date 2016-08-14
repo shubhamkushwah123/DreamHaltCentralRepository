@@ -1,0 +1,185 @@
+<div class="section" ng-controller="user_notification">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav  nav-stacked" role="tablist">
+                        <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                        -->
+                        <li class="active">
+                            <a href="notifications" role="tab" data-toggle="tab" >
+                                Notifications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="payment_methods" role="tab" data-toggle="tab">
+                                Payment Methods
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payout_preferences" role="tab" data-toggle="tab">
+                                Payout Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaction_history" role="tab" data-toggle="tab">
+                                Transaction History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy" role="tab" data-toggle="tab">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security" role="tab" data-toggle="tab">
+                                Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings" role="tab" data-toggle="tab">
+                                Setting
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="invite" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="Invite Friends" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Text Message Settings</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-4">
+                                        Receive mobile updates by regular SMS text message.
+                                    </div>
+
+                                    <div class="col-sm-5 col-md-5">
+                                        <div>
+                                            Receive SMS notifications to :
+                                        </div>    
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="message"  ><span class="checkbox-material"><span class="check"></span></span>
+                                                <b>Messages </b>
+                                            </label>
+                                            <p> <small>From hosts and guests </small> </p>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="reservation"  ><span class="checkbox-material"><span class="check"></span></span>
+                                                <b>Reservation Updates</b> 
+                                            </label>
+                                            <p> <small>Requests, confirmations, changes and more </small> </p>
+                                        </div>
+
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" ng-model="other" ><span class="checkbox-material"><span class="check"></span></span>
+                                                <b> Other </b>
+                                            </label>
+                                            <p><small>Feature updates and more</small> </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-3 col-md-3">
+                                        <select class="select form-control border-input" ng-options="Gen for Gen in contact" ng-model="selectedContact"></select>
+
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="general">
+
+                        <div class="card card-nav-tabs">
+                            <div class="header header-success small">
+                                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper text-center">
+                                        <h4>Email Settings</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <form>
+
+                                    <div class="row">
+                                        <div class="col-md-5">
+
+                                            <h4 class="title">
+                                                <span class="tim-note"> I want to receive:</span>
+                                            </h4>
+                                            <label>You can disable these at any time.</label>
+
+                                        </div>
+                                        <div class="col-md-7">
+
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" ng-model="emailGeneral" ><span class="checkbox-material"><span class="check"></span></span>
+
+                                                </label>
+                                                General promotions, updates, news about Airbnb or general promotions for partner campaigns and services, user surveys, inspiration, and love from Us.
+                                            </div>
+
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" ng-model="emailReservation" ><span class="checkbox-material"><span class="check"></span></span>
+
+                                                </label>
+                                                Reservation and review reminders.
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="text-center pull-right">
+
+                        <input type="button" value="Save" class="btn btn-primary btn-raised " ng-click="submit()">
+                    </div>    
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

@@ -1,0 +1,212 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                 <ul class="nav nav-stacked" role="tablist">
+                       
+                        <li class="active">
+                            <a href="profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="view" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="View Profile" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="card">
+                        <div class="content">
+                            <div class="alert alert-success" style="display:none;">We have resent a confirmation email.  Please check your inbox.</div>
+                            <div class="alert alert-error" style="display:none;">Unable to send a confirmation email.  Please try again later.</div>
+
+
+                            <div class="tab-content">
+                                <div class="tab-pane active">
+                                    <div class="row row-table">
+                                        <div class="col-md-9 ">
+                                            <h4>
+                                                <strong>Verify Your ID</strong>
+                                            </h4>
+                                            <p>
+                                                Getting your Verified ID is the easiest way to help build trust in the Dreahalt community.  We’ll verify you by matching information from an online account to an official ID. <a href="../help">Learn more</a>
+                                            </p>
+                                            <p>
+                                                Or, you can choose to only add the verifications you want below.
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3 text-center">
+                                            <div class="container-fluid">
+                                                <a href="#verify" class="btn  btn-primary">Verify Me</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+
+
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Verification</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+
+                            <div class="tab-content ">
+                                <div class="tab-pane active">
+                                    <ul class="nav nav-pills" id="verified">
+
+                                        <li class="">
+                                            <h4>Email Address</h4>
+
+                                            <p class="description">You have confirmed your email: <b>{{ email}}</b>.  A confirmed email is important to allow us to securely communicate with you.
+
+                                            </p>
+                                        </li>
+                                        <li class="">
+                                            <h4>Phone number</h4>
+                                            <p class="description">
+                                                Your number is only shared with another Airbnb member once you have a confirmed booking.
+                                            </p>
+                                        </li>
+                                        <li class="">
+                                            <h4>Facebook</h4>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <p class="description">
+                                                        Sign in with Facebook and discover your trusted connections to hosts and guests all over the world.
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="container-fluid">
+
+                                                        <a href="service=facebook" class="btn btn-primary" data-method="post" rel="nofollow">Disconnect</a>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <i class="icon icon-question icon-question-sign" data-behavior="tooltip" rel="tooltip" style="font-size: " aria-label="You can always reconnect later."></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Add More Verification</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+
+                            <div class="tab-content ">
+                                <div class="tab-pane active">
+                                    <ul class="nav nav-pills" id="moreverified">
+
+                                        <li class="">
+                                            <h4>Google</h4>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <p class="description">
+                                                        Connect your Dreamhalt account to your Google account for simplicity and ease to connect to your friend.
+                                                    </p>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="container-fluid">
+
+                                                        <a href="service=facebook" class="btn btn-primary" data-method="post" rel="nofollow">connect</a>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <i class="icon icon-question icon-question-sign" data-behavior="tooltip" rel="tooltip" style="font-size: " aria-label="You can always reconnect later."></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="">
+                                            <h4>LinkedIn</h4>
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <p class="description">
+                                                        Create a link to your professional life by connecting your Dreamhalt and LinkedIn accounts. </p>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="container-fluid">
+
+                                                        <a href="service=LinkedIn" class="btn btn-primary" data-method="post" rel="nofollow">connect</a>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <i class="icon icon-question icon-question-sign" data-behavior="tooltip" rel="tooltip" style="font-size: " aria-label="You can always reconnect later."></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- End Tabs with icons on Card -->
+
+</div>
+
+
+</div>

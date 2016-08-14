@@ -1,0 +1,168 @@
+<div ng-init="calculate()" class="section" ng-controller="transaction_history">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav  nav-stacked" role="tablist">
+                        <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                        -->
+                        <li class="active">
+                            <a href="notifications" role="tab" data-toggle="tab" >
+                                Notifications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="payment_methods" role="tab" data-toggle="tab">
+                                Payment Methods
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payout_preferences" role="tab" data-toggle="tab">
+                                Payout Preferences
+                            </a>
+                        </li>
+                        <li>
+                            <a href="transaction_history" role="tab" data-toggle="tab">
+                                Transaction History
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy" role="tab" data-toggle="tab">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="security" role="tab" data-toggle="tab">
+                                Security
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings" role="tab" data-toggle="tab">
+                                Setting
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="invite" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="Invite Friends" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="card card-nav-tabs">
+                        <div class="header header-success small">
+                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper text-center">
+                                    <h4>Transaction History</h4>
+
+
+                                    <form class="navbar-form navbar-right" role="search">
+                                        <div class="form-group  is-empty">
+                                            <input type="text" class="form-control" placeholder="Search" ng-model="search">
+                                            <span class="material-input"></span></div>
+                                        <button type="submit" class="btn btn-primary btn-raised btn-fab btn-fab-mini"><i class="material-icons">search</i></button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center" ng-click="sort('id')">#
+                                                            <span class="carot" ng-show="sortKey == 'id'" ng-class="{'dropup':reverse,'dropdown':!reverse}"><b class="caret"></b></span>
+                                                        </th>
+                                                        <th></th>
+                                                        <th ng-click="sort('date')">Date 
+
+                                                            <span class="carot" ng-show="sortKey == 'date'" ng-class="{'dropup':reverse,'dropdown':!reverse}"><b class="caret"></b></span>
+                                                        </th>
+                                                        <th ng-click="sort('type')">Type
+                                                            <span class="carot" ng-show="sortKey == 'type'" ng-class="{'dropup':reverse,'dropdown':!reverse}"><b class="caret"></b></span>
+                                                        </th>
+                                                        <th>Details</th>
+                                                        <th class="text-right" ng-click="sort('Amount')">Amount
+                                                            <span class="carot" ng-show="sortKey == 'Amount'" ng-class="{'dropup':reverse,'dropdown':!reverse}"><b class="caret"></b></span>
+                                                        </th>
+                                                        <th class="text-right" ng-click="sort('paidOut')">Paid Out
+                                                            <span class="carot" ng-show="sortKey == 'paidOut'" ng-class="{'dropup':reverse,'dropdownn':!reverse}"><b class="caret"></b></span>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr  dir-paginate="item in list|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                                                        <td class="text-center">{{item.id}}</td>
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" ng-model="item.confirmed" ng-change="calculate()"><span class="checkbox-material"><span class="check"></span></span>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                        <td>{{ item.date}}</td>
+                                                        <td>{{ item.type}}</td>
+                                                        <td>{{ item.details}}</td>
+                                                        <td class="text-right">{{ item.Amount}}</td>
+                                                        <td class="text-right">{{ item.paidOut}}</td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="4"></td>
+                                                        <td class="td-total">
+                                                            Total
+                                                        </td>
+                                                        <td class="td-price">
+                                                            <small>€</small>{{totalAmount}} 
+                                                        </td>
+                                                        <td class="td-price">
+                                                            <small>€</small>{{totalpaidOut}} 
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                            <dir-pagination-controls
+                                                max-size="5"
+                                                direction-links="true"
+                                                boundary-links="true" >
+                                            </dir-pagination-controls>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="clearfix"></div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

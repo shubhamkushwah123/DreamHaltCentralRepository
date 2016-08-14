@@ -1,0 +1,225 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav  nav-stacked" role="tablist">
+                        <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                        -->
+                        <li class="active">
+                            <a href="#profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <!-- Tabs with icons on Card -->
+                    <div class="cards scard-nav-tabs">
+                        <div class="card">
+
+                            <div class="content">
+                                <div class="col-md-9">
+
+                                    <div id="dashboard-content">
+                                        <div class="alert alert-success" style="display:none;">We have resent a confirmation email.  Please check your inbox.</div>
+                                        <div class="alert alert-error" style="display:none;">Unable to send a confirmation email.  Please try again later.</div>
+
+                                        <div class="panel row-space-3">
+                                            <div class="panel-body">
+                                                <div class="row row-table">
+                                                    <div class="col-7 col-middle">
+                                                        <p>
+                                                            <strong>Verify Your ID</strong>
+                                                        </p>
+                                                        <p>
+                                                            Getting your Verified ID is the easiest way to help build trust in the Airbnb community.  We’ll verify you by matching information from an online account to an official ID. <a href="/help/article/450">Learn more</a>
+                                                        </p>
+                                                        <p>
+                                                            Or, you can choose to only add the verifications you want below.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-5 col-middle text-center">
+                                                        <div class="verify-button-container">
+                                                            <a href="#verify" class="btn btn-large btn-primary">Verify Me</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="cards scard-nav-tabs">
+                        <div class="card">
+
+                            <div class="content">
+                                <div class="col-md-9">
+
+                                    <div id="dashboard-content">
+                                        <div class="alert alert-success" style="display:none;">We have resent a confirmation email.  Please check your inbox.</div>
+                                        <div class="alert alert-error" style="display:none;">Unable to send a confirmation email.  Please try again later.</div>
+
+
+                                        <div class="panel verified-container">
+                                            <div class="panel-header">
+                                                Your Current Verifications
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="list-layout edit-verifications-list">
+                                                    <li class="edit-verifications-list-item clearfix email verified">
+                                                        <h4>Email address</h4>
+                                                        <p class="description">You have confirmed your email: <b>bhupender.singh405@gmail.com</b>.  A confirmed email is important to allow us to securely communicate with you.
+
+                                                        </p></li>
+                                                    <li class="edit-verifications-list-item clearfix phone verified">
+                                                        <h4>Phone number</h4>
+
+                                                        <p class="description">
+                                                            Your number is only shared with another Airbnb member once you have a confirmed booking.
+                                                        </p>
+
+
+
+                                                    </li>
+                                                    <li class="edit-verifications-list-item clearfix facebook verified">
+                                                        <h4>Facebook</h4>
+                                                        <div class="row">
+                                                            <div class="col-7">
+                                                                <p class="description verification-text-description">
+                                                                    Sign in with Facebook and discover your trusted connections to hosts and guests all over the world.
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="col-5">
+                                                                <div class="disconnect-button-container">
+                                                                    <a href="https://www.airbnb.co.in/oauth/delete?service=facebook" class="btn gray" data-method="post" rel="nofollow">Disconnect</a>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    <i class="icon icon-question icon-question-sign" data-behavior="tooltip" rel="tooltip" style="font-size: " aria-label="You can always reconnect later."></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="cards scard-nav-tabs">
+                        <div class="card">
+
+                            <div class="content">
+                                <div class="col-md-9">
+
+                                    <div id="dashboard-content">
+
+                                        <div class="panel row-space-top-4 unverified-container">
+                                            <div class="panel-header">
+                                                Add More Verifications
+                                            </div>
+                                            <div class="panel-body">
+                                                <ul class="list-layout edit-verifications-list">
+                                                    <li class="google unverified row-space-4 clearfix">
+                                                        <h4>
+                                                            Google
+                                                        </h4>
+                                                        <div class="row">
+                                                            <div class="col-7">
+                                                                <p class="description verification-text-description">
+                                                                    Connect your Airbnb account to your Google account for simplicity and ease.
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <div class="connect-button">
+                                                                    <a class="btn btn-block large" href="https://www.airbnb.co.in/oauth_connect?service=google">
+                                                                        Connect
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </li>
+                                                    <li class="linkedin unverified row-space-4 clearfix">
+                                                        <h4>
+                                                            LinkedIn
+                                                        </h4>
+                                                        <div class="row">
+                                                            <div class="col-7">
+                                                                <p class="description verification-text-description">
+                                                                    Create a link to your professional life by connecting your Airbnb and LinkedIn accounts.
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <div class="connect-button">
+                                                                    <a class="btn btn-block" href="https://www.airbnb.co.in/oauth_connect?service=linked_in_v2">Connect</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Tabs with icons on Card -->
+
+    </div>
+
+
+</div>

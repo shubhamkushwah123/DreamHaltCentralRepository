@@ -1,0 +1,93 @@
+<div class="section" ng-controller="user_profile">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row col-md-12">
+                <div class="col-lg-3 col-md-3">
+                     <ul class="nav nav-stacked" role="tablist">
+                       
+                        <li class="active">
+                            <a href="profile" role="tab" data-toggle="tab" >
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="photo_upload" role="tab" data-toggle="tab">
+                                Profile Photo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_verification" role="tab" data-toggle="tab">
+                                Trust and Verification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reviews" role="tab" data-toggle="tab">
+                                Reviews
+                            </a>
+                        </li>
+                        <li>
+                            <a href="references" role="tab" data-toggle="tab">
+                                References
+                            </a>
+                        </li>
+                        <li>
+                            <div class="">
+                                <a href="view" role="tab" data-toggle="tab">
+
+                                    <input type="button" value="View Profile" class="btn btn-primary btn-raised " >
+                                </a>
+
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-lg-9 col-md-9">
+
+                    <div class="tab-pane" id="#photo_upload">
+
+                        <div class="card">
+
+                            <div class="content">
+
+                                <div class="card-title">
+                                    <h3> Profile Photo </h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-5 col-lg-4">
+                                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                <div class="fileinput-new thumbnail img-raised">
+                                                    <img src="../img/sara-1.png" alt=""/>
+                                                </div>
+                                                <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                                <div>
+                                                    <span class="btn btn-raised btn-round btn-primary btn-file">
+                                                        <span class="fileinput-new">Select image</span>
+                                                        <span class="fileinput-exists">Change</span>
+                                                        <input type="file" name="...">
+                                                    </span>
+                                                    <a href="#upload_photo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-lg-8">
+
+                                            <p>
+                                                Clear frontal face photos are an important way for hosts and guests to learn about each other. It’s not much fun to host a landscape! Please upload a photo that clearly shows your face.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Tabs with icons on Card -->
+    </div>
+</div>

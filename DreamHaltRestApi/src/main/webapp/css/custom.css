@@ -1,0 +1,182 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 Jul, 2016, 1:06:11 PM
+    Author     : bhupender
+*/
+
+/* CSS for Credit Card Payment form */
+.credit-card-box .panel-title {
+    display: inline;
+    font-weight: bold;
+}
+.credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+}
+.credit-card-box label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box .payment-errors {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+.credit-card-box label {
+    display: block;
+}
+/* The old "center div vertically" hack */
+.credit-card-box .display-table {
+    display: table;
+}
+.credit-card-box .display-tr {
+    display: table-row;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+/* Just looks nicer */
+.credit-card-box .panel-heading img {
+    min-width: 180px;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+
+.form-control.border-input {
+  border: 1px solid #7AC29A;
+  background-image: none;
+}
+
+.sidebar .logo,
+.off-canvas-sidebar .logo {
+    padding: 18px 0px;
+    margin: 0 20px;
+}
+.sidebar .logo p,
+.off-canvas-sidebar .logo p {
+    float: left;
+    font-size: 20px;
+    margin: 10px 10px;
+    line-height: 20px;
+}
+.sidebar .logo .simple-text,
+.off-canvas-sidebar .logo .simple-text {
+    text-transform: uppercase;
+    padding: 4px 0px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
+
+.sidebar .logo, .sidebar[data-background-color="white"] .logo,
+.off-canvas-sidebar .logo,
+.off-canvas-sidebar[data-background-color="white"] .logo {
+    border-bottom: 1px solid rgba(102, 97, 91, 0.3);
+}
+.sidebar .logo p, .sidebar[data-background-color="white"] .logo p,
+.off-canvas-sidebar .logo p,
+.off-canvas-sidebar[data-background-color="white"] .logo p {
+    color: #66615B;
+}
+.sidebar .logo .simple-text, .sidebar[data-background-color="white"] .logo .simple-text,
+.off-canvas-sidebar .logo .simple-text,
+.off-canvas-sidebar[data-background-color="white"] .logo .simple-text {
+    color: #66615B;
+}
+
+.small {
+    padding: 1px !important;
+}
+
+.form-group .form-control {
+    margin: 0px !important;
+    padding : 0px !important;
+}
+
+.logo-profile {
+    width: 64px !important;
+    display :inline-block;
+    margin: 5px 15px;
+}
+
+.section {
+    padding: 20px 0;
+}
+
+
+.nav-tabs-bar {
+    background: #484848!important;
+    border-radius: 0px!important;
+    padding: 0px 0px !important;      
+}
+
+.nav-tabs > li > a {
+    text-transform: none !important;
+    font-weight: 300 !important;
+}
+
+nav-tabs-bar > li > a, .nav-tabs-bar > li > a:hover, .nav-tabs-bar > li > a:focus {
+    background-color: transparent;
+    border: 0 !important;
+    color: #FFFFFF !important;
+    text-transform: none !important;
+}
+
+a {
+   color: #757575;
+}
+
+.border-input {
+  border: solid 1px #CCC5B9;
+}
+
+
+.nav-stacked > li {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500 !important;
+}
+
+/*
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 10px !important;
+}
+
+nav > li > a {
+    position: relative;
+    display: block;
+    padding: 5px 20px !important;
+}
+
+
+.card-nav-tabs {
+    margin-top: 25px!important;
+}
+
+.card .content {
+     padding:  0px 10px !important; 
+}
+*/
+.navbar{
+    margin-bottom: 0px !important;
+} 
+
