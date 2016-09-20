@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.dh.dao.entities.Token;
+import com.dh.dao.entities.User;
 import com.dh.dao.interfaces.TokenDaoInterface;
 
 public class TokenDaoImpl implements TokenDaoInterface{
@@ -26,6 +27,15 @@ public class TokenDaoImpl implements TokenDaoInterface{
 			return false;	
 		}
 
+	}
+
+	public Token retrieveToken(long tokenId) {
+		
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		Token token = (Token) session.get(Token.class, tokenId);
+		session.close();
+		return token;
 	}
 
 }

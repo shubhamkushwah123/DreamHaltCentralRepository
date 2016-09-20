@@ -4,6 +4,8 @@ import com.dh.dao.entities.Token;
 
 public interface TokenDaoInterface {
 
-	boolean insertToken(Token token);
+	public boolean insertToken(Token token);
+	
+	public Token retrieveToken(long tokenId);
 
 }
