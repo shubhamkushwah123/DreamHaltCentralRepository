@@ -17,15 +17,14 @@ public class LoginDaoImpl implements LoginDaoInterface {
 
 	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 	
-	@Override
 	public Login retirevePassword(String username) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 
-	@Override
-	public User verifyLogin(Login login) {
+	
+	public long verifyLogin(Login login) {
 		Session session = sessionFactory.openSession();
 		long userId = 0;
 	    try {
@@ -41,9 +40,9 @@ public class LoginDaoImpl implements LoginDaoInterface {
 	            while(iterator.hasNext()){
 	             userId  = (Long) iterator.next();
 	                }
-	            User user = (User) session.get(User.class, userId);
+	           // User user = (User) session.get(User.class, userId);
 	           // user.getListOfVerification();
-	            return user;
+	           
 	    } catch (HibernateException e) {
 	        if (session.getTransaction() != null) {
 	            session.getTransaction().rollback();
@@ -52,7 +51,8 @@ public class LoginDaoImpl implements LoginDaoInterface {
 	    } finally {
 	        session.close();
 	    }
-	    return null;
+		return userId;
+	    
 	}
 
 

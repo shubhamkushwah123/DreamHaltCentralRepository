@@ -26,7 +26,7 @@
  		<mapping class="com.dh.dao.entities.Verification"/>
  		<mapping class="com.dh.dao.entities.ProfileImage"/>
  		<mapping class="com.dh.dao.entities.Login"/>
- 		
+ 		<mapping class="com.dh.dao.entities.Token"/>
         <!--<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>-->
         <!--<property name="connection.url">jdbc:mysql:///hibernate_tests?useUnicode=true&amp;characterEncoding=UTF-8</property>-->
         <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->

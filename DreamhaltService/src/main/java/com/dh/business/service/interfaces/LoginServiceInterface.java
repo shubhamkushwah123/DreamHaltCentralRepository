@@ -5,8 +5,10 @@ import com.dh.dao.entities.User;
 
 public interface LoginServiceInterface {
 	
-	public User verifyLogin(Login login);
+	public long verifyLogin(Login login);
 	
 	public Login forgetPassword(Login login);
+
+	public Login decodeCredentials(String credentials);
 
 }

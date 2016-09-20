@@ -18,22 +18,22 @@ public class LoginTestService {
 	
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
-	 public User getIt() {
+	 public long getIt() {
 	  
 	  System.out.println("I am calling from Rest Service");
 	  Login login = new Login();
 	  login.setUsername("shubhamkushwah123@gmail.com");
 	  login.setPassword("Shubham123");
 	  LoginServiceInterface loginService = new LoginServiceImpl();
-	  User user = loginService.verifyLogin(login);
+	  long userId = loginService.verifyLogin(login);
 	  String msg = null;
-	  if(user==null){
+	  if(userId!=0){
 		 msg = "Invalid username & Password";
 	  }
 	  else{
-		 msg = "User " + user.getFirstName() + "is successfully loggedIn";
+		 msg = "User " + userId + "is successfully loggedIn";
 	  }
-	  return user;
+	  return userId;
 	 }
 
 }

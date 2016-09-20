@@ -5,7 +5,7 @@ import com.dh.dao.entities.User;
 
 public interface LoginDaoInterface {
 	
-	public User verifyLogin(Login login);
+	public long verifyLogin(Login login);
 	
 	public Login retirevePassword(String username);
 

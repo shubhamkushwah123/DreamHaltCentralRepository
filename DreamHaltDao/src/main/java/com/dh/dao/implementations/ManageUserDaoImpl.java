@@ -23,7 +23,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 	@SuppressWarnings("deprecation")
 	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 	
-	@Override
+	 
 	public long createUser(User user,Login login) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -43,7 +43,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		
 	}
 
-	@Override
+	 
 	public User updateUser(User user) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -62,7 +62,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 
 	
 
-	@Override
+	 
 	public User retrieveUser(long userId) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -73,7 +73,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 
 	
 
-	@Override
+	 
 	public Verification addVerification(Verification verification) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -90,13 +90,13 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public boolean removeVerification(Verification verification) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	 
 	public Verification updateVerification(Verification verification) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -113,7 +113,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public List<Verification> getAllVerification(long userId) {
 		List<Verification> list = new ArrayList<Verification>();
 		Session session = sessionFactory.openSession();
@@ -132,7 +132,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 	}
 	
 	
-	@Override
+	 
 	public Verification getVerification(long verificationId) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -149,7 +149,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public Address addAddress(Address address) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -168,13 +168,13 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		
 	}
 
-	@Override
+	 
 	public Address removeAddress(Address address) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	 
 	public Address updateAddress(Address address) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -192,7 +192,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		
 	}
 
-	@Override
+	 
 	public Address getAddress(long addressId) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -208,7 +208,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public ProfileImage addProfileImage(ProfileImage profileImage) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -227,7 +227,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 	}
 
 	
-	@Override
+	 
 	public ProfileImage updateProfileImage(ProfileImage profileImage) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
@@ -245,7 +245,7 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public ProfileImage getProfileImage(long userId) {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
@@ -262,25 +262,25 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		}
 	}
 
-	@Override
+	 
 	public ProfileImage removeProfileImage(ProfileImage profileImage) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	 
 	public boolean deleteUser(User user) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	
-	@Override
+	 
 	public boolean verifyLogin(String email, String password) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
+	 
 	public boolean retrieveLogin(String username) {
 		Session session = sessionFactory.openSession();
 		long userId = 0;
