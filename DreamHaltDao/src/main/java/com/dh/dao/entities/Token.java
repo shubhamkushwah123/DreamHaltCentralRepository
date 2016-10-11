@@ -12,13 +12,13 @@ public class Token {
 	
 	@Id
 	@Column(name="token_id")
-	long tokenId;
+	private long tokenId;
 	
 	@Column(name="created_at")
-	Date createdAt;
+	private Date createdAt;
 	
 	@Column(name="token_key")
-	String tokenString;
+	private String tokenString;
 	
 
 	public long getTokenId() {

@@ -13,17 +13,17 @@ public class Verification {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="v_id")
-	long vId;
+	private long vId;
 	
 	@Column(name="v_type")
-	String vType;
+	private String vType;
 	
 	@Column(name="v_attachment")
-	String vAttachment;
+	private String vAttachment;
 
 	@ManyToOne
 	@JoinColumn(name="user_id")
-	User user;
+	private User user;
 	
 	public User getUser() {
 		return user;

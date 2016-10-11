@@ -9,11 +9,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Login {
 	
 	@Id
-	long userId;
+	private long userId;
 
-	String username;
+	private String username;
 	
-	String password;
+	private String password;
 	
 	public long getUserId() {
 		return userId;

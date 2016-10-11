@@ -13,18 +13,18 @@ public class ProfileImage {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="image_id")
-	long imageId;
+	private long imageId;
 
 	@Column(name="image_type")
-	char imageType;
+	private char imageType;
 	
-	String name;
+	private String name;
 	
-	char status;
+	private char status;
 	
-	Date createdAt;
+	private Date createdAt;
 	
-	Date updatedAt;
+	private Date updatedAt;
 
 	public long getImageId() {
 		return imageId;

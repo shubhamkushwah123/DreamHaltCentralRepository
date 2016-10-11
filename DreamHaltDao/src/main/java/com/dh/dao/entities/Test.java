@@ -5,11 +5,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 public class Test {
 	
-	int id;
+	private int id;
 	
-	String name;
+	private String name;
 	
-	Login login;
+	private Login login;
 
 	public Login getLogin() {
 		return login;

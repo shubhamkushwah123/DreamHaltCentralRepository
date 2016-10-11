@@ -12,27 +12,27 @@ import javax.persistence.OneToOne;
 public class Address {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	long addressId;
+	private long addressId;
 	
-	char type;
+	private char type;
 	
-	String houseNo;
+	private String houseNo;
 	
-	String street;
+	private String street;
 	
-	String colony;
+	private String colony;
 	
-	String area;
+	private String area;
 	
-	String landmark;
+	private String landmark;
 	
-	String pincode;
+	private String pincode;
 	
-	String city;
+	private String city;
 	
-	String state;
+	private String state;
 	
-	String country;
+	private String country;
 	
 	
 

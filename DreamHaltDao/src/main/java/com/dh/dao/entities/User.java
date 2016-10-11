@@ -21,36 +21,36 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class User {
 	
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
-	long id;
+	private long id;
 	
 	@Column(name="firstName")
-	String firstName;
+	private String firstName;
 	
 	@Column(name="lastName")
-	String lastName;
+	private String lastName;
 	
-	Date dob;
+	private Date dob;
 	
-	String gender;
+	private String gender;
 	
-	String email;
+	private String email;
 	
 	@Column(name="mobileNo")
-	String mobileNo;
+	private String mobileNo;
 	
-	String landLineNo;
+	private String landLineNo;
 	
-	String description;
+	private String description;
 	
-	String school;
+	private String school;
 	
-	String college;
+	private String college;
 	
-	String organisation;
+	private String organisation;
 	
-	char status;
+	private char status;
 	
-	String password;
+	private String password;
 	
 	
 	@OneToOne(fetch=FetchType.EAGER)
