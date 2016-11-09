@@ -181,15 +181,11 @@ public class ManageUserDaoImpl implements ManageUserDaoInterface {
 		try{
 			session.update(address);
 			session.getTransaction().commit();
-			session.close();
 			return address;
-		}catch(Exception e)
-		{
-			session.close();
-			e.printStackTrace();
-			return null;	
 		}
-		
+		finally{
+			session.close();
+		}
 	}
 
 	 

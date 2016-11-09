@@ -3,7 +3,6 @@ package com.dh.dao.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 public class Login {

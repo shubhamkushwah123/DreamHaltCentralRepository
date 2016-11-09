@@ -6,18 +6,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.PathParam;
-
+import com.dh.dao.entities.Login;
+import com.dh.dao.entities.Token;
+import com.dh.presentation.dto.Links;
+import com.dh.presentation.dto.DreamHalt;
 import com.dh.business.service.implementation.LoginServiceImpl;
 import com.dh.business.service.implementation.TokenServiceImpl;
 import com.dh.business.service.interfaces.LoginServiceInterface;
 import com.dh.business.service.interfaces.TokenServiceInterface;
-import com.dh.dao.entities.Login;
-import com.dh.dao.entities.Test;
-import com.dh.dao.entities.Token;
-import com.dh.dao.entities.User;
-import com.dh.presentation.dto.HomeScreenDTO;
-import com.dh.presentation.dto.LinkDTO;
 
 
 @Path("login")
@@ -27,19 +23,21 @@ public class LoginRestService {
 	
 	LoginServiceInterface loginService = new LoginServiceImpl();
 	TokenServiceInterface tokenService = new TokenServiceImpl();
-	HomeScreenDTO homeScreenDto = new HomeScreenDTO();
+	DreamHalt dreamHalt = new DreamHalt();
 	Login login = new Login();
+	Links links = new Links();
+	String message = "";
 	
 	
 	@GET
 	@Path("/verify")
 	@Produces(MediaType.APPLICATION_JSON)
-	public HomeScreenDTO verifyUserLogin(@Context HttpHeaders httpHeaders)
+	public DreamHalt verifyUserLogin(@Context HttpHeaders httpHeaders)
 	{
 		String credentials = httpHeaders.getRequestHeader(AUTHENTICATION_HEADER).get(0);
 		if(credentials.isEmpty()){
-			System.out.println("Credentials are Empty");
-			return null;
+			message = "Credentials are Empty";
+			System.out.println(message);
 		}
 		else {
 				login = loginService.decodeCredentials(credentials);
@@ -48,20 +46,23 @@ public class LoginRestService {
 				{
 					Token token = tokenService.generateToken(userId);
 					if(tokenService.saveToken(token)){
-						homeScreenDto.setToken(token);
-						homeScreenDto.setLinkDTO(new LinkDTO());
+						dreamHalt.setToken(token);
+						dreamHalt.setLinks(links);
 					}
 					else{
+						message = "Error in Inserting Token";
 						System.out.println("Error in Inserting Token");
 					}	
 				}
 				else
 				{
+					message = "Invalid Credentials";
 					System.out.println("Invalid Credentials");
 				}
-			return homeScreenDto;
+			
 		}
-	
+		dreamHalt.setResponseMessage(message);
+		return dreamHalt;
 	}
 	
 	

@@ -12,7 +12,7 @@ public interface ManageUserServiceInterface {
 	
 	//Create Para
 	
-	public boolean registerUser(User user,Login login);
+	public boolean registerUser(User user,Login login) throws Exception;
 	
 	public Address createUserAddress(long userId,Address address);
 	

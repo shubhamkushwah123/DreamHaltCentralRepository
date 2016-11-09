@@ -38,18 +38,16 @@ public class TokenServiceImpl implements TokenServiceInterface {
 		Token token = tokenDao.retrieveToken(inputTokenId);
 		long timeToExpire = new Date().getTime() - token.getCreatedAt().getTime();
 		System.out.println(timeToExpire);
-		if(token!=null) {
-			if(token.getTokenString().toUpperCase().equalsIgnoreCase(tokenKey.toUpperCase())
-				&& timeToExpire <= MAX_DURATION ) {
-				System.out.println("Time difference :" + (token.getCreatedAt().getTime() - new Date().getTime()));
-						return token;
+			if(token!=null) {
+				if(token.getTokenString().toUpperCase().equalsIgnoreCase(tokenKey.toUpperCase())
+					&& timeToExpire <= MAX_DURATION ) {
+					System.out.println("Time difference :" + (token.getCreatedAt().getTime() - new Date().getTime()));
+					return token;
+				}
 			}
-		}
-		else {
-			System.out.println("No Token is avaialble");
-		}
-		return null;
 		
+		
+		return null;
 	}
 
 }

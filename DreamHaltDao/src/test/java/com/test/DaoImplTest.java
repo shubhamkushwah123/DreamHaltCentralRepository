@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.dh.dao.entities.Address;
 import com.dh.dao.entities.Login;
+import com.dh.dao.entities.ProfileImage;
 import com.dh.dao.entities.User;
 import com.dh.dao.implementations.ManageUserDaoImpl;
 import com.dh.dao.interfaces.ManageUserDaoInterface;
@@ -12,18 +13,39 @@ public class DaoImplTest {
 
 	public static void main(String args[])
 	{
-		createUser();
+		//createUser();
 		//updateUser();
-		//addAddress();
-		
+		addAddress();
+		addProfileImage();
+	}
+
+	private static void addProfileImage() {
+		ManageUserDaoInterface userDao = new ManageUserDaoImpl();
+		User user = userDao.retrieveUser(1);
+		ProfileImage profileImage= getProfileImage();
+		userDao.addProfileImage(profileImage);
+		user.setImage(profileImage);
+		System.out.println("Address Inserted & Id is "+ user.getImage());
+		user = userDao.updateUser(user);
+		System.out.println("User updated & Id is " + user.getId());
+	}
+
+	private static ProfileImage getProfileImage() {
+		ProfileImage profileImage = new ProfileImage();
+		profileImage.setImageType('u');
+		profileImage.setName("profile");
+		profileImage.setStatus('A');
+		profileImage.setUpdatedAt(new Date());
+		profileImage.setCreatedAt(new Date());
+		return profileImage;
 	}
 
 	private static void addAddress() {
-		long userId=21;
+		long userId=1;
 		User user = getUser();
 		Address address = getAddress();
 		ManageUserDaoInterface userDao = new ManageUserDaoImpl();
-		user = userDao.retrieveUser(21);
+		user = userDao.retrieveUser(1);
 		address = userDao.addAddress(address);
 		user.setAddress(address);
 		System.out.println("Address Inserted & Id is "+ address.getAddressId());

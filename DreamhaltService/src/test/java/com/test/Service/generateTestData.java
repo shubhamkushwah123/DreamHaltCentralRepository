@@ -11,7 +11,7 @@ import com.dh.dao.entities.User;
 public class generateTestData {
 	
 	
-	public static void main(String args[])
+	public static void main(String args[]) throws Exception
 	{
 		ManageUserServiceInterface userService = new ManageUserServiceImpl();
 		User user = getUser();

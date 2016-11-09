@@ -1,6 +1,5 @@
 package com.dh.dao.entities;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 public class Test {

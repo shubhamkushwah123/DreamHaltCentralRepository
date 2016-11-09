@@ -16,24 +16,26 @@ public class ManageUserServiceImpl implements ManageUserServiceInterface{
 	ManageUserDaoInterface userDao = new ManageUserDaoImpl();
 
 	@Override
-	public boolean registerUser(User user,Login login) {
+	public boolean registerUser(User user,Login login) throws Exception {
+
 		if(user!=null)
 		{
-			validateUser(user);
-			if(checkIfUsernameExist(login.getUsername()))
-			{
-				System.out.println("user " + login.getUsername() + " already exists");
-				return false;
-			}
+			if(validateUser(user)){
 			long userId = userDao.createUser(user, login);
-			if(userId!=0)
-			{
-				System.out.println("User is successfully registered");
-				return true;
+				if(userId!=0)
+				{
+					System.out.println("User is successfully registered");
+					return true;
+				}
+			}
+			else{
+				throw new Exception("email already exists");
 			}
 		}
-		return false;
-		
+		{
+			throw new Exception("user is empty");
+		}
+	
 	}
 
 	
@@ -74,14 +76,13 @@ public class ManageUserServiceImpl implements ManageUserServiceInterface{
 
 	@Override
 	public User updateUserGeneralDetails(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		 return userDao.updateUser(user);
+		
 	}
 
 	@Override
 	public Address updateUserAddress(Address address) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.updateAddress(address);
 	}
 
 	@Override
@@ -110,8 +111,7 @@ public class ManageUserServiceImpl implements ManageUserServiceInterface{
 
 	@Override
 	public User getGeneralUserDetails(long userId) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.retrieveUser(userId);
 	}
 
 	@Override
